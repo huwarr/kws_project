@@ -14,7 +14,7 @@ def audio_stream(queue: mp.Queue):
     """
 
     streamer = StreamReader(src=":0", format="avfoundation")
-    streamer.add_basic_audio_stream(frames_per_chunk=8000, sample_rate=16000)
+    streamer.add_basic_audio_stream(frames_per_chunk=1, sample_rate=16000)
     stream_iterator = streamer.stream(-1, 1)
 
     logger.info("Start audio streaming")
@@ -25,7 +25,7 @@ def audio_stream(queue: mp.Queue):
 
 
 if __name__ == "__main__":
-    model = torch.load("kws.pth").eval()
+    model = torch.load("streaming_kws.pth").eval()
 
     ctx = mp.get_context("spawn")
     chunk_queue = ctx.Queue()
@@ -36,7 +36,6 @@ if __name__ == "__main__":
         try:
             chunk = chunk_queue.get()
             chunk = chunk.view(1, -1)
-            print(f"{chunk.shape=}")
 
             with torch.inference_mode():
                 result = model(chunk)
