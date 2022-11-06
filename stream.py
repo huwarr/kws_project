@@ -32,6 +32,7 @@ if __name__ == "__main__":
     streaming_process = ctx.Process(target=audio_stream, args=(chunk_queue,))
 
     streaming_process.start()
+    i = 0
     while True:
         try:
             chunk = chunk_queue.get()
@@ -41,7 +42,8 @@ if __name__ == "__main__":
                 result = model(chunk)
 
             if result > 0.7:
-                print("DETECTED KEY WORD")
+                print("DETECTED KEY WORD on chunck {}".format(i))
+            i += 1
 
         except KeyboardInterrupt:
             break
