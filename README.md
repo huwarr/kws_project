@@ -79,6 +79,6 @@ sh setup.sh
 
 ### Sources
 
-1. [Post Training Quantization: official pytorch tutorial](https://pytorch.org/tutorials/advanced/static_quantization_tutorial.html#post-training-static-quantization)
+1. [Post Training Quantization: pytorch tutorial](https://pytorch.org/tutorials/advanced/static_quantization_tutorial.html#post-training-static-quantization)
 2. [Distilling the Knowledge in a Neural Network: paper](https://arxiv.org/pdf/1503.02531.pdf)
-3. [Saving and Loading Models](https://pytorch.org/tutorials/beginner/saving_loading_models.html)
+3. [Saving and Loading Models: pytorch tutorial](https://pytorch.org/tutorials/beginner/saving_loading_models.html)
