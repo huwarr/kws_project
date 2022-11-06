@@ -31,6 +31,7 @@ sh setup.sh
 
   - **Speed up & Compression** - an implementation of 3 approaches to compress and speed up the base model.
       1. **Dark Knowledge Distilation**
+      
          Distilled a smaller model with the base model as the teacher.
 
          Qulity of student model: `5.49e-5 < 5.5e-5 * 1.1` as was required.
@@ -40,9 +41,10 @@ sh setup.sh
          speed up rate: 10.9215
          ```
 
-         <span style="color:purple">***I would like this approach to be accounted for when grading my homework.***</span>.
+         ***I would like this approach to be accounted for when grading my homework.***
 
       2. **Quantization**
+      
          Applied [Post Training Quantization](https://pytorch.org/tutorials/advanced/static_quantization_tutorial.html#post-training-static-quantization) to the base model.
 
          Quality: `3.93e-5`
@@ -53,6 +55,7 @@ sh setup.sh
          ```
 
        3. **Dark Knowledge Distillation + Quantization**
+       
           Applied Post Training Quantization to the distilled version of the base model.
 
           Quality: `6.25e-5`
@@ -71,4 +74,11 @@ sh setup.sh
 
 - `requirements.txt` - all the necessary requirements for the code, provided in `code_final.ipynb`
 
-- `setup.sh` - a bash script to download all checkpoints (`.pt` and `.pth  files)
+- `setup.sh` - a bash script to download all checkpoints (`.pt` and `.pth`  files)
+
+
+### Sources
+
+1. [Post Training Quantization: official pytorch tutorial](https://pytorch.org/tutorials/advanced/static_quantization_tutorial.html#post-training-static-quantization)
+2. [Distilling the Knowledge in a Neural Network: paper](https://arxiv.org/pdf/1503.02531.pdf)
+3. [Saving and Loading Models](https://pytorch.org/tutorials/beginner/saving_loading_models.html)
