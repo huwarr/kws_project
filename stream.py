@@ -14,7 +14,7 @@ def audio_stream(queue: mp.Queue):
     """
 
     streamer = StreamReader(src=":0", format="avfoundation")
-    streamer.add_basic_audio_stream(frames_per_chunk=1, buffer_chunk_size=560, sample_rate=16000)
+    streamer.add_basic_audio_stream(frames_per_chunk=1, buffer_chunk_size=1024, sample_rate=16000)
     stream_iterator = streamer.stream(-1, 1)
 
     logger.info("Start audio streaming")
