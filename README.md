@@ -34,7 +34,7 @@ sh setup.sh
       
          Distilled a smaller model with the base model as the teacher.
 
-         Qulity of student model: `5.49e-5 < 5.5e-5 * 1.1` as was required.
+         Qulity of student model: `5.49e-5 < 5e-5 * 1.1` as was required.
 
          ```bash
          compression rate: 10.2823
@@ -79,6 +79,7 @@ sh setup.sh
 
 ### Sources
 
-1. [Post Training Quantization: pytorch tutorial](https://pytorch.org/tutorials/advanced/static_quantization_tutorial.html#post-training-static-quantization)
-2. [Distilling the Knowledge in a Neural Network: paper](https://arxiv.org/pdf/1503.02531.pdf)
-3. [Saving and Loading Models: pytorch tutorial](https://pytorch.org/tutorials/beginner/saving_loading_models.html)
+1. [Streaming Aware neural network models: README](https://github.com/google-research/google-research/blob/master/kws_streaming/README.md)
+2. [Post Training Quantization: pytorch tutorial](https://pytorch.org/tutorials/advanced/static_quantization_tutorial.html#post-training-static-quantization)
+3. [Distilling the Knowledge in a Neural Network: paper](https://arxiv.org/pdf/1503.02531.pdf)
+4. [Saving and Loading Models: pytorch tutorial](https://pytorch.org/tutorials/beginner/saving_loading_models.html)
