@@ -60,10 +60,10 @@ sh setup.sh
 
           Quality: `6.25e-5`
 
-         ```bash
-         compresion rate: 11.2051
-         speed up rate: 17.8776
-         ```
+          ```bash
+          compresion rate: 11.2051
+          speed up rate: 17.8776
+          ```
 - `base.pt` - state dict of the trained base model
 
 - `streaming_kws.pth` - streaming KWS saved in `torch.jit` format
