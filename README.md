@@ -34,7 +34,7 @@ sh setup.sh
       
          Distilled a smaller model with the base model as the teacher.
 
-         Qulity of student model: `5.49e-5 < 5.5e-5 * 1.1` as was required.
+         Qulity of student model: `5.49e-5 < 5e-5 * 1.1` as was required.
 
          ```bash
          compression rate: 10.2823
