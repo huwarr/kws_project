@@ -61,7 +61,7 @@ sh setup.sh
           Quality: `6.25e-5`
 
           ```bash
-          compresion rate: 11.2051
+          compresion rate: 10.2051
           speed up rate: 17.8776
           ```
 - `base.pt` - state dict of the trained base model
